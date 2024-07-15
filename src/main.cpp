@@ -1,5 +1,4 @@
 #include <raylib.h>
-#include "ball.h"
 
 int main()
 {
@@ -8,17 +7,13 @@ int main()
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    Ball ball = Ball();
-
-    InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
+    InitWindow(screenWidth, screenHeight, "Game of Life - John Conway");
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(darkGreen);
-        ball.Update();
-        ball.Draw();
         EndDrawing();
     }
 
