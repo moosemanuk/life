@@ -8,11 +8,12 @@ int main()
     SetTargetFPS(TARGET_FPS);
 
     Game game;
+    game.SetGameState(running);
 
     while (!WindowShouldClose())
     {
         // Event Handling
-        
+        game.HandleEvents();
         // Update State
         game.UpdateCells();
         // Drawing
@@ -20,6 +21,7 @@ int main()
         ClearBackground(BACKGROUND_COLOUR);
         game.Draw();
         EndDrawing();
+        
     }
 
     CloseWindow();

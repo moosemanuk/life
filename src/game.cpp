@@ -12,12 +12,14 @@ void Game::Draw()
 
 void Game::UpdateCells()
 {
-    for(int row = 0 ; row < GRID_ROWS ; row++){
-        for(int col = 0 ; col < GRID_COLS ; col++){
-            UpdateState(row, col);
+    if(gamestate == running){
+        for(int row = 0 ; row < GRID_ROWS ; row++){
+            for(int col = 0 ; col < GRID_COLS ; col++){
+                UpdateState(row, col);
+            }
         }
+        grid = tempGrid;
     }
-    grid = tempGrid;
 }
 
 void Game::UpdateState(int row, int col)
@@ -47,4 +49,26 @@ void Game::UpdateState(int row, int col)
             tempGrid.SetValue(row, col, 1);
         }        
     }       
+}
+
+void Game::HandleEvents()
+{
+    if(IsKeyPressed(KEY_SPACE) || IsKeyPressed(MOUSE_BUTTON_LEFT)){
+        if(gamestate == running){
+            gamestate = paused;
+        }
+        else{
+            gamestate = running;
+        }
+    }
+}
+
+state Game::GetGameState()
+{
+    return gamestate;
+}
+
+void Game::SetGameState(state gamestate)
+{
+    this->gamestate = gamestate;
 }
