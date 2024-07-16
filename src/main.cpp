@@ -1,19 +1,20 @@
 #include <raylib.h>
+#include "constants.h"
 
 int main()
 {
-    Color darkGreen = Color{20, 160, 133, 255};
-
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-
-    InitWindow(screenWidth, screenHeight, "Game of Life - John Conway");
-    SetTargetFPS(60);
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game of Life - John Conway");
+    SetTargetFPS(TARGET_FPS);
 
     while (!WindowShouldClose())
     {
+        // Event Handling
+
+        // Update State
+
+        // Drawing
         BeginDrawing();
-        ClearBackground(darkGreen);
+        ClearBackground(BACKGROUND_COLOUR);
         EndDrawing();
     }
 
