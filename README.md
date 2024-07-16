@@ -1,6 +1,6 @@
 # Game of Life - by John Conway (1937 - 2020)
 
-An automaton with rules created by John Conway in 1970. It is a cellular automaton that obeys the following rules:
+Created by John Conway in 1970. It is a cellular automaton that obeys the following rules:
 
 1) Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 2) Any live cell with two or three live neighbours lives on to the next generation.

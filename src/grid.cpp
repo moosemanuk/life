@@ -40,3 +40,13 @@ void Grid::Draw()
         }
     }
 }
+
+int Grid::GetValue(int row, int col)
+{
+    return grid[row][col];
+}
+
+void Grid::SetValue(int row, int col, int value)
+{
+    grid[row][col] = value;
+}

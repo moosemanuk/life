@@ -6,12 +6,14 @@
 
 class Grid{
     private:
-        int grid[GRID_ROWS][GRID_COLS];
+        int grid[GRID_ROWS][GRID_COLS];        
         std::vector<Color> colours;
 
     public:
         Grid();
         void InitialiseGrid();
-        void Draw();
+        void Draw();        
+        int GetValue(int row, int col);
+        void SetValue(int row, int col, int value);
     
 };

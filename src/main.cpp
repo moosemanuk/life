@@ -14,7 +14,7 @@ int main()
         // Event Handling
         
         // Update State
-
+        game.UpdateCells();
         // Drawing
         BeginDrawing();
         ClearBackground(BACKGROUND_COLOUR);
