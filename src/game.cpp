@@ -53,7 +53,7 @@ void Game::UpdateState(int row, int col)
 
 void Game::HandleEvents()
 {
-    if(IsKeyPressed(KEY_SPACE) || IsKeyPressed(MOUSE_BUTTON_LEFT)){
+    if(IsKeyPressed(KEY_SPACE) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
         if(gamestate == running){
             gamestate = paused;
         }
