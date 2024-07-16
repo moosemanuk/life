@@ -9,5 +9,6 @@ const int GRID_ROWS = 75;
 const int GRID_COLS = 75;
 
 const int CELL_SIZE = 10;
+const int RANDOM_SEED = 10;
 
 const Color BACKGROUND_COLOUR = DARKGRAY;
