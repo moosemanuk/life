@@ -21,7 +21,7 @@
     <ClInclude Include="src\constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\game.h">
+    <ClInclude Include="src\simulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\grid.h">
@@ -32,7 +32,7 @@
     <ClCompile Include="src\colours.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\game.cpp">
+    <ClCompile Include="src\simulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\grid.cpp">

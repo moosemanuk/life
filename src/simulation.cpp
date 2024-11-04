@@ -1,18 +1,18 @@
-#include "game.h"
+#include "simulation.h"
 
-Game::Game()
+Simulation::Simulation()
 {
 
 }
 
-void Game::Draw()
+void Simulation::Draw()
 {
    grid.Draw();
 }
 
-void Game::UpdateCells()
+void Simulation::UpdateCells()
 {
-    if(gamestate == running){
+    if(simulationState == running){
         for(int row = 0 ; row < GRID_ROWS ; row++){
             for(int col = 0 ; col < GRID_COLS ; col++){
                 UpdateState(row, col);
@@ -22,7 +22,7 @@ void Game::UpdateCells()
     }
 }
 
-void Game::UpdateState(int row, int col)
+void Simulation::UpdateState(int row, int col)
 {
     int liveNeighbourCount = 0;
     std::vector<std::pair<int, int>> offsets = 
@@ -51,24 +51,24 @@ void Game::UpdateState(int row, int col)
     }       
 }
 
-void Game::HandleEvents()
+void Simulation::HandleEvents()
 {
     if(IsKeyPressed(KEY_SPACE) || IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-        if(gamestate == running){
-            gamestate = paused;
+        if(simulationState == running){
+            simulationState = paused;
         }
         else{
-            gamestate = running;
+            simulationState = running;
         }
     }
 }
 
-state Game::GetGameState()
+state Simulation::GetSimulationState()
 {
-    return gamestate;
+    return simulationState;
 }
 
-void Game::SetGameState(state gamestate)
+void Simulation::SetSimulationState(state gamestate)
 {
-    this->gamestate = gamestate;
+    this->simulationState = gamestate;
 }

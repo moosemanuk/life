@@ -1,25 +1,22 @@
 #include <raylib.h>
 #include "constants.h"
-#include "game.h"
+#include "simulation.h"
 
 int main()
 {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game of Life - John Conway");
     SetTargetFPS(TARGET_FPS);
 
-    Game game;
-    game.SetGameState(running);
+    Simulation *simulation = new Simulation;
+    simulation->SetSimulationState(running);
 
     while (!WindowShouldClose())
     {
-        // Event Handling
-        game.HandleEvents();
-        // Update State
-        game.UpdateCells();
-        // Drawing
+        simulation->HandleEvents();
+        simulation->UpdateCells();
         BeginDrawing();
         ClearBackground(BACKGROUND_COLOUR);
-        game.Draw();
+        simulation->Draw();
         EndDrawing();
         
     }

@@ -129,12 +129,12 @@
   <ItemGroup>
     <ClInclude Include="src\colours.h" />
     <ClInclude Include="src\constants.h" />
-    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\simulation.h" />
     <ClInclude Include="src\grid.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\colours.cpp" />
-    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\simulation.cpp" />
     <ClCompile Include="src\grid.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
