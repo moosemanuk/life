@@ -1,12 +1,10 @@
 #include "colours.h"
 #include <vector>
 
-const Color black = {0,0,0,255};
-//const Color green = {47,230,23,255};
-
-const Color green = {34,129,34,255};
+const Color CELL_COLOUR = { 0x0D, 0x27, 0x14, 0x255 };
+const Color ACTIVE_COLOUR = { 0xD9, 0xE4, 0xE0, 0xFF };
 
 std::vector<Color> GetCellColours()
 {
-    return {black, green};
+    return { CELL_COLOUR, ACTIVE_COLOUR };
 }
