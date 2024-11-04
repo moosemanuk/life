@@ -6,7 +6,7 @@ Grid::Grid()
     InitialiseGrid();
 
     //testing!
-    grid[25][30] = 1;
+    //grid[25][30] = 1;
 }
 
 void Grid::InitialiseGrid()
